@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🔨 Build: Run One-Click Environment Setup",
+            "type": "shell",
+            "command": "./setup.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "🌱 Database: Reset & Re-Seed Ledger",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/bin/python",
+            "args": [
+                "db_manager.py"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
