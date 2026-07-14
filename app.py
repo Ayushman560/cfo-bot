@@ -261,6 +261,7 @@ with st.sidebar:
         "Gemini API Key", 
         type="password", 
         placeholder="Enter API Key...",
+        value=os.environ.get("GEMINI_API_KEY", ""),
         help="Optional. Paste your Gemini API key here to translate any custom natural language prompt into SQL. If left blank, you can use the predefined queries below."
     )
     
